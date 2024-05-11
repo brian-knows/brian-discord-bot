@@ -72,8 +72,15 @@ client.once(Events.ClientReady, async (discord) => {
 
       const row = new ActionRowBuilder().addComponents(...buttons);
 
+      let content = `🧠 **${prompt}**\n\n${text}`;
+
+      if (content.length > 2000) {
+        // truncate the content to max 2000 characters
+        content = content.substring(0, 2000);
+      }
+
       await interaction.editReply({
-        content: `🧠 **${prompt}**\n\n${text}`,
+        content,
         // @ts-ignore
         components: [row],
       });
