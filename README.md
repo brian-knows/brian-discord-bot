@@ -20,7 +20,7 @@ git clone https://github.com/brian-knows/brian-discord-bot.git
 2. Install the dependencies
 
 ```bash
-npm install
+yarn install
 ```
 
 3. Create a `.env` file with the following content:
@@ -33,7 +33,7 @@ BRIAN_API_KEY="" # Your Brian API key
 4. Build and start the bot
 
 ```bash
-npm run build
+yarn build
 pm2 start dist/index.js
 ```
 
